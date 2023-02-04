@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sky{
+    height: 100vh ;
+    width: 100%;
+    position: absolute;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    /* animation: skyMove linear .7s infinite; */
+}
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -111px;
+}
+
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    position: absolute;
+    /* background-size: cover; */
+    background-repeat: repeat-x;
+    top: 70vh;
+    animation: carMove linear .9s infinite;
+}
+
+body{
+    overflow: hidden;
+    animation: shakeBody linear 16s infinite;
+}
+
+.car{
+    height: 100px;
+    width: 350px;
+    background-image: url(car_body.png);
+    background-size: cover;             /*  Jitni jagah tumhari actual hai wo poori cover karlo */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 300px;
+    bottom: 29vh;
+    animation: shake linear .3s infinite;
+}
+
+/* .wheel{
+
+} */
+
+.wheel1 img{
+    width: 77px;
+    position: relative;
+    top: 34px;
+    left: 37px;
+    animation: wheelRotation linear .2s infinite;
+}
+
+
+
+.wheel2 img{
+    width: 77px;
+    position: relative;
+    top: -46px;
+    left: 216px;
+    animation: wheelRotation linear .2s infinite;
+}
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-30vw);
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes shakeBody
+{
+    0%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes skyMove
+{
+    100%{
+        transform: translateX(-1vw);
+    }
+}
